@@ -1,0 +1,387 @@
+[
+  {
+    "Country": "New York ",
+    "Active Cases": "260,189 ",
+    "coordinates": [40.7127281, -74.0060152],
+    "activeCases": 260189,
+    "value": 1000.0
+  },
+  {
+    "Country": "New Jersey ",
+    "Active Cases": "127,943 ",
+    "coordinates": [40.0757384, -74.4041622],
+    "activeCases": 127943,
+    "value": 491.731010919
+  },
+  {
+    "Country": "Massachusetts ",
+    "Active Cases": "62,513 ",
+    "coordinates": [42.3788774, -72.032366],
+    "activeCases": 62513,
+    "value": 240.2599648717
+  },
+  {
+    "Country": "Illinois ",
+    "Active Cases": "69,874 ",
+    "coordinates": [40.0796606, -89.4337288],
+    "activeCases": 69874,
+    "value": 268.550937972
+  },
+  {
+    "Country": "California ",
+    "Active Cases": "51,833  ",
+    "coordinates": [36.7014631, -118.7559974],
+    "activeCases": 51833,
+    "value": 199.2128798681
+  },
+  {
+    "Country": "Pennsylvania ",
+    "Active Cases": "53,345 ",
+    "coordinates": [40.9699889, -77.7278831],
+    "activeCases": 53345,
+    "value": 205.0240402169
+  },
+  {
+    "Country": "Michigan ",
+    "Active Cases": "26,259 ",
+    "coordinates": [43.6211955, -84.6824346],
+    "activeCases": 26259,
+    "value": 100.9227907406
+  },
+  {
+    "Country": "Florida ",
+    "Active Cases": "37,599 ",
+    "coordinates": [27.7567667, -81.4639835],
+    "activeCases": 37599,
+    "value": 144.5064933568
+  },
+  {
+    "Country": "Texas ",
+    "Active Cases": "17,177 ",
+    "coordinates": [31.8160381, -99.5120986],
+    "activeCases": 17177,
+    "value": 66.0173950474
+  },
+  {
+    "Country": "Georgia ",
+    "Active Cases": "30,783 ",
+    "coordinates": [41.6809707, 44.0287382],
+    "activeCases": 30783,
+    "value": 118.3101514668
+  },
+  {
+    "Country": "Connecticut ",
+    "Active Cases": "29,472 ",
+    "coordinates": [41.6500201, -72.7342163],
+    "activeCases": 29472,
+    "value": 113.2715064818
+  },
+  {
+    "Country": "Maryland ",
+    "Active Cases": "27,879 ",
+    "coordinates": [39.5162234, -76.9382069],
+    "activeCases": 27879,
+    "value": 107.1490339715
+  },
+  {
+    "Country": "Louisiana ",
+    "Active Cases": " 8,834 ",
+    "coordinates": [30.8703881, -92.007126],
+    "activeCases": 8834,
+    "value": 33.9522424084
+  },
+  {
+    "Country": "Indiana ",
+    "Active Cases": "20,683 ",
+    "coordinates": [40.3270127, -86.1746933],
+    "activeCases": 20683,
+    "value": 79.4922152743
+  },
+  {
+    "Country": "Ohio ",
+    "Active Cases": "21,918 ",
+    "coordinates": [40.2253569, -82.6881395],
+    "activeCases": 21918,
+    "value": 84.2387648978
+  },
+  {
+    "Country": "Virginia ",
+    "Active Cases": "19,245 ",
+    "coordinates": [37.1232245, -78.4927721],
+    "activeCases": 19245,
+    "value": 73.9654635669
+  },
+  {
+    "Country": "Colorado ",
+    "Active Cases": "17,308 ",
+    "coordinates": [38.7251776, -105.6077167],
+    "activeCases": 17308,
+    "value": 66.5208752099
+  },
+  {
+    "Country": "Washington ",
+    "Active Cases": "13,535 ",
+    "coordinates": [38.8949855, -77.0365708],
+    "activeCases": 13535,
+    "value": 52.019877858
+  },
+  {
+    "Country": "North Carolina ",
+    "Active Cases": "12,107 ",
+    "coordinates": [35.6729639, -79.0392919],
+    "activeCases": 12107,
+    "value": 46.5315597508
+  },
+  {
+    "Country": "Tennessee ",
+    "Active Cases": "7,189 ",
+    "coordinates": [35.7730076, -86.2820081],
+    "activeCases": 7189,
+    "value": 27.629915177
+  },
+  {
+    "Country": "Iowa ",
+    "Active Cases": "6,734 ",
+    "coordinates": [41.9216734, -93.3122705],
+    "activeCases": 6734,
+    "value": 25.8811863684
+  },
+  {
+    "Country": "Rhode Island ",
+    "Active Cases": "9,841 ",
+    "coordinates": [41.7962409, -71.5992372],
+    "activeCases": 9841,
+    "value": 37.8225059476
+  },
+  {
+    "Country": "Arizona ",
+    "Active Cases": "10,358 ",
+    "coordinates": [34.395342, -111.7632755],
+    "activeCases": 10358,
+    "value": 39.8095230775
+  },
+  {
+    "Country": "Minnesota ",
+    "Active Cases": "3,910 ",
+    "coordinates": [45.9896587, -94.6113288],
+    "activeCases": 3910,
+    "value": 15.0275376745
+  },
+  {
+    "Country": "Missouri ",
+    "Active Cases": "7,189 ",
+    "coordinates": [38.7604815, -92.5617875],
+    "activeCases": 7189,
+    "value": 27.629915177
+  },
+  {
+    "Country": "Wisconsin ",
+    "Active Cases": "4,858 ",
+    "coordinates": [44.4308975, -89.6884637],
+    "activeCases": 4858,
+    "value": 18.6710429726
+  },
+  {
+    "Country": "Alabama ",
+    "Active Cases": "9,078 ",
+    "coordinates": [33.2588817, -86.8295337],
+    "activeCases": 9078,
+    "value": 34.8900222531
+  },
+  {
+    "Country": "Mississippi ",
+    "Active Cases": "4,536 ",
+    "coordinates": [32.9715645, -89.7348497],
+    "activeCases": 4536,
+    "value": 17.4334810465
+  },
+  {
+    "Country": "Nebraska ",
+    "Active Cases": "7,717 ",
+    "coordinates": [41.7370229, -99.5873816],
+    "activeCases": 7717,
+    "value": 29.6592092671
+  },
+  {
+    "Country": "South Carolina ",
+    "Active Cases": "2,166  ",
+    "coordinates": [33.6874388, -80.4363743],
+    "activeCases": 2166,
+    "value": 8.3247178013
+  },
+  {
+    "Country": "Kansas ",
+    "Active Cases": "4,934 ",
+    "coordinates": [38.27312, -98.5821872],
+    "activeCases": 4934,
+    "value": 18.9631383341
+  },
+  {
+    "Country": "Kentucky ",
+    "Active Cases": "3,724 ",
+    "coordinates": [37.5726028, -85.1551411],
+    "activeCases": 3724,
+    "value": 14.312672711
+  },
+  {
+    "Country": "Delaware ",
+    "Active Cases": "3,828 ",
+    "coordinates": [38.6920451, -75.4013315],
+    "activeCases": 3828,
+    "value": 14.712382153
+  },
+  {
+    "Country": "District Of Columbia ",
+    "Active Cases": "4,912 ",
+    "coordinates": [38.8936613, -76.9878833],
+    "activeCases": 4912,
+    "value": 18.8785844136
+  },
+  {
+    "Country": "Nevada ",
+    "Active Cases": "1,530 ",
+    "coordinates": [39.5158825, -116.8537227],
+    "activeCases": 1530,
+    "value": 5.8803408292
+  },
+  {
+    "Country": "Utah ",
+    "Active Cases": "3,673 ",
+    "coordinates": [39.4225192, -111.7143584],
+    "activeCases": 3673,
+    "value": 14.11666135
+  },
+  {
+    "Country": "New Mexico ",
+    "Active Cases": "3,367 ",
+    "coordinates": [34.5708167, -105.993007],
+    "activeCases": 3367,
+    "value": 12.9405931842
+  },
+  {
+    "Country": "Oklahoma ",
+    "Active Cases": " 1,156 ",
+    "coordinates": [34.9550817, -97.2684063],
+    "activeCases": 1156,
+    "value": 4.442924182
+  },
+  {
+    "Country": "Arkansas ",
+    "Active Cases": "691 ",
+    "coordinates": [35.2048883, -92.4479108],
+    "activeCases": 691,
+    "value": 2.6557617732
+  },
+  {
+    "Country": "South Dakota  ",
+    "Active Cases": "1,044 ",
+    "coordinates": [44.6471761, -100.348761],
+    "activeCases": 1044,
+    "value": 4.0124678599
+  },
+  {
+    "Country": "Oregon ",
+    "Active Cases": "1,819 ",
+    "coordinates": [43.9792797, -120.737257],
+    "activeCases": 1819,
+    "value": 6.9910718747
+  },
+  {
+    "Country": "New Hampshire ",
+    "Active Cases": "1,616 ",
+    "coordinates": [43.4849133, -71.6553992],
+    "activeCases": 1616,
+    "value": 6.2108697908
+  },
+  {
+    "Country": "Idaho ",
+    "Active Cases": "759 ",
+    "coordinates": [43.6447642, -114.0154071],
+    "activeCases": 759,
+    "value": 2.9171102545
+  },
+  {
+    "Country": "North Dakota ",
+    "Active Cases": "667 ",
+    "coordinates": [47.6201461, -100.540737],
+    "activeCases": 667,
+    "value": 2.5635211327
+  },
+  {
+    "Country": "Maine ",
+    "Active Cases": "487 ",
+    "coordinates": [45.709097, -68.8590201],
+    "activeCases": 487,
+    "value": 1.8717163293
+  },
+  {
+    "Country": "West Virginia ",
+    "Active Cases": "544 ",
+    "coordinates": [38.4758406, -80.8408415],
+    "activeCases": 544,
+    "value": 2.0907878504
+  },
+  {
+    "Country": "Vermont ",
+    "Active Cases": "124 ",
+    "coordinates": [44.5990718, -72.5002608],
+    "activeCases": 124,
+    "value": 0.4765766424
+  },
+  {
+    "Country": "Wyoming ",
+    "Active Cases": "209 ",
+    "coordinates": [43.1700264, -107.5685348],
+    "activeCases": 209,
+    "value": 0.803262244
+  },
+  {
+    "Country": "Hawaii ",
+    "Active Cases": "47 ",
+    "coordinates": [21.2160437, -157.975203],
+    "activeCases": 47,
+    "value": 0.1806379209
+  },
+  {
+    "Country": "Montana ",
+    "Active Cases": "20 ",
+    "coordinates": [47.3752671, -109.6387579],
+    "activeCases": 20,
+    "value": 0.0768672004
+  },
+  {
+    "Country": "Alaska ",
+    "Active Cases": "62 ",
+    "coordinates": [64.4459613, -149.680909],
+    "activeCases": 62,
+    "value": 0.2382883212
+  },
+  {
+    "Country": "Guam ",
+    "Active Cases": "15 ",
+    "coordinates": [13.4501257, 144.757551],
+    "activeCases": 15,
+    "value": 0.0576504003
+  },
+  {
+    "Country": "Northern Mariana Islands ",
+    "Active Cases": "2 ",
+    "coordinates": [14.1490205, 145.2134525],
+    "activeCases": 2,
+    "value": 0.00768672
+  },
+  {
+    "Country": "Puerto Rico ",
+    "Active Cases": "1,319 ",
+    "coordinates": [18.2214149, -66.4132818],
+    "activeCases": 1319,
+    "value": 5.0693918651
+  },
+  {
+    "Country": "United States Virgin Islands ",
+    "Active Cases": "7 ",
+    "coordinates": [17.789187, -64.7080574],
+    "activeCases": 7,
+    "value": 0.0269035201
+  }
+]
