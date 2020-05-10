@@ -71,7 +71,7 @@ export default function App() {
           onMouseOutMarker={() => setDetails(null)}
           cameraOptions={{
             maxDistanceRadiusScale: 100,
-            autoRotateSpeed: 0.1,
+            autoRotateSpeed: 1.0,
             distanceRadiusScale: 100,
           }}
           focusOptions={{
