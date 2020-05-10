@@ -38,14 +38,11 @@ body {
 .details {
   background: gainsboro;
   opacity: 0.5;
-
   position: absolute;
-  @media only screen and (min-device-width: 750px) {
-    top: 5em;
-    right: 1em;
-    padding: 12;
-    margin-top: 5em;
-  }
+  top: 5em;
+  right: 1em;
+  padding: 12;
+  margin-top: 5em;
 }
 .details p {
   font-family: sans-serif;
@@ -78,6 +75,11 @@ body {
     left: 0em;
     width: 100%;
     text-align: center;
+
+    top: unset;
+    right: unset;
+    padding: unset;
+    margin-top: unset;
   }
 
   .details p {

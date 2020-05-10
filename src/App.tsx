@@ -53,7 +53,7 @@ export default function App() {
       if (windowDimensions.width <= 500) {
         setDetails(null);
       }
-    }, 2000);
+    }, 3000);
   };
 
   return (
