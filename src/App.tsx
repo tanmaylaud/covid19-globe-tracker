@@ -10,9 +10,27 @@ import { Object3D } from "three";
 import { Spinner } from "./Spinner";
 import globalData from "./assets/global.json";
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
 export default function App() {
   const [details, setDetails] = useState<any>(null);
   const [isLoaded, onTextureLoaded] = useState(false);
+  const [cameraOptions, setCameraOptions] = useState({
+    maxDistanceRadiusScale: 100,
+    autoRotateSpeed: 0.1,
+    distanceRadiusScale: 100,
+  });
+
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
   function getTooltipContent(marker: Marker) {
     return `Location: ${marker.Country} (Active Cases: ${marker.activeCases})`;
   }
@@ -22,12 +40,21 @@ export default function App() {
     markerObject?: Object3D,
     event?: PointerEvent
   ) {
+    zoomOut();
     setDetails(getTooltipContent(marker));
   }
 
   function onDefocus(previousCoordinates: any, event?: PointerEvent) {
     setDetails(null);
   }
+
+  const zoomOut = () => {
+    setTimeout(() => {
+      if (windowDimensions.width <= 500) {
+        setDetails(null);
+      }
+    }, 2000);
+  };
 
   return (
     <React.Fragment>
@@ -43,12 +70,13 @@ export default function App() {
           onMouseOverMarker={onClickMarker}
           onMouseOutMarker={() => setDetails(null)}
           cameraOptions={{
-            maxDistanceRadiusScale: 10,
-            autoRotateSpeed: 1.1,
-            distanceRadiusScale: 10,
+            maxDistanceRadiusScale: 100,
+            autoRotateSpeed: 0.1,
+            distanceRadiusScale: 100,
           }}
           focusOptions={{
-            distanceRadiusScale: 5,
+            distanceRadiusScale: 30,
+            enableDefocus: true,
           }}
           globeOptions={{
             texture: worldTexture,

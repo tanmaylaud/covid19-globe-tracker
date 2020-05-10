@@ -4,9 +4,9 @@ body {
 }
 .globe {
   font-family: sans-serif;
-  height: 80vh;
   position: relative;
   z-index: 0;
+  height: 80vh;
 }
 .header1 {
   font-family: sans-serif;
