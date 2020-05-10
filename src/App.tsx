@@ -108,9 +108,9 @@ function Counter() {
   }, []);
   useEffect(() => {
     if (counter != total) {
-      if (total - counter == 10000) setCounter(counter + 1);
-      else if (counter < 10000) setCounter(counter + 100);
-      else if (counter < 100000) setCounter(counter + 50);
+      if (total - counter <= 1000) setCounter(counter + 1);
+      else if (counter < 10000) setCounter(counter + 1000);
+      else setCounter(counter + 500);
     }
   }, [counter]);
 
