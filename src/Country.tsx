@@ -8,4 +8,5 @@ export interface Country {
   confirmed: number;
   recoveries: number;
   deaths: number;
+  active: number;
 }

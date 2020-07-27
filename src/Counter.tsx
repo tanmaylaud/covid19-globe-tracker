@@ -10,7 +10,8 @@ export function Counter({ count }: CounterProps) {
 
   useEffect(() => {
     if (counter != count) {
-      if (count - counter <= 1000) setCounter(counter + 1);
+      if (count - count <= 200) setCounter(counter + 1);
+      if (count - counter <= 1000) setCounter(counter + 100);
       else if (counter < 10000) setCounter(counter + 1000);
       else setCounter(counter + 10000);
     }

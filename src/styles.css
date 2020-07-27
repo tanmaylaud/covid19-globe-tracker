@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: "Space Mono", monospace;
+  font-family: "Calibri", monospace;
   overflow: hidden;
   background: black;
 }
@@ -13,7 +13,7 @@ body {
   z-index: 1;
   top: 20px;
   position: absolute;
-  color: white;
+  color: red;
   text-align: center;
   width: 100%;
 }
@@ -29,7 +29,7 @@ body {
 
 .title {
   font-size: 35px;
-  color: #e6f1ff;
+  color: red;
 }
 
 .title-desc {
@@ -41,15 +41,29 @@ body {
 #infected {
   color: goldenrod;
 }
+#infected:hover {
+  font-size: 40px;
+}
 
 #deaths {
   color: #ff4848;
+}
+#deaths:hover {
+  font-size: 40px;
 }
 
 #recovered {
   color: #1ae021;
 }
-
+#recovered:hover {
+  font-size: 40px;
+}
+#active {
+  color: #04ffff;
+}
+#active:hover {
+  font-size: 40px;
+}
 .card {
   font-family: "Space Mono", monospace;
   transition: 0.3s;
@@ -93,7 +107,35 @@ body {
 .scene-tooltip {
   z-index: 2;
 }
+.gradient-container {
+  text-align: center;
+}
+.gradient-container > div {
+  position: relative;
+  display: inline-block;
+}
+.gradient {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    rgb(248, 231, 231),
+    rgb(255, 2, 2),
+    #850000
+  );
+}
 
+.moreInfo {
+  border-bottom: #ff4848;
+  border-color: red;
+  color: yellow;
+}
+.moreInfo:hover {
+  font-size: 40px;
+}
 @media only screen and (max-width: 768px) {
   .bottom-info-container {
     z-index: 1;

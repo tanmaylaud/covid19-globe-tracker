@@ -11,7 +11,7 @@ import { Countries, Country } from "./Country";
 import { GlobalCounts } from "./GlobalCounts";
 
 const getVal = (feat: any) => {
-  return Math.pow(feat.covidData.confirmed / feat.properties.POP_EST, 1 / 4);
+  return Math.pow(feat.covidData.active / feat.properties.POP_EST, 1 / 4);
 };
 
 interface Feature {
@@ -66,10 +66,6 @@ async function getCases() {
   countries = await request(CASES_API);
   featureCollection = (await request(GEOJSON_URL)).features;
 
-  // world.polygonsData(countriesWithCovid);
-  document.querySelector(".title-desc")!.innerHTML =
-    "Hover on a country or territory to see cases, deaths, and recoveries.";
-
   dates = Object.keys(countries.China);
 
   updateCounters();
@@ -77,11 +73,6 @@ async function getCases() {
 
   updatePointOfView();
 }
-
-//const infectedEl = document.querySelector("#infected")!;
-//const deathsEl = document.querySelector("#deaths")!;
-//const recoveriesEl = document.querySelector("#recovered")!;
-//const updatedEl = document.querySelector(".updated")!;
 
 function updateCounters() {
   let totalConfirmed = 0;
@@ -112,12 +103,17 @@ function updatePolygonsData() {
         confirmed: countries[country][dates[date]].confirmed,
         deaths: countries[country][dates[date]].deaths,
         recoveries: countries[country][dates[date]].recoveries,
+        active:
+          countries[country][dates[date]].confirmed -
+          countries[country][dates[date]].deaths -
+          countries[country][dates[date]].recoveries,
       };
     } else {
       featureCollection[x].covidData = {
         confirmed: 0,
         deaths: 0,
         recoveries: 0,
+        active: 0,
       };
     }
   }

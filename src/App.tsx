@@ -8,8 +8,11 @@ import { Spinner } from "./Spinner";
 
 export default function App() {
   const [totals, setTotals] = useState<number[]>([]);
-
+  const [loaderTimeout, timedOut] = useState(false);
   useEffect(() => initGlobe(), []);
+  useEffect(() => {
+    setTimeout(() => timedOut(true), 5000);
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       let total: number[] = [];
@@ -24,13 +27,16 @@ export default function App() {
     <React.Fragment>
       <div id="globeViz"></div>
       <div className="top-info-container">
-        <div className="title">COVID-19</div>
+        <div className="title">COVID-19 Globe Tracker</div>
         <div className="title-desc">
-          Loading countries affected by the virus...
+          Hover on a country or territory to see cases, deaths, and recoveries.
         </div>
       </div>
       <div className="bottom-info-container">
-        <Spinner loaded={GlobalCounts.set} />
+        <span className="gradient-container">
+          LOW<div className="gradient"></div>HIGH
+        </span>
+        <Spinner loaded={GlobalCounts.set || loaderTimeout} />
         {GlobalCounts.set ? (
           <>
             <div
@@ -61,14 +67,14 @@ export default function App() {
             </div>
           </>
         ) : null}
-        <div style={{ marginTop: "5px" }}>
+        <div className="moreInfo" style={{ marginTop: "5px" }}>
           <a
             href="https://github.com/tanmaylaud/covid19-globe-tracker"
             rel="noopener noreferrer"
             target="_BLANK"
-            style={{ color: "#ffffff", textDecoration: "none" }}
+            style={{ color: "yellow", textDecoration: "none" }}
           >
-            More Information
+            Click For More Information
           </a>
         </div>
       </div>
