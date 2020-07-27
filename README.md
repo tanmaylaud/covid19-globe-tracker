@@ -8,19 +8,19 @@
 
 #### [React](https://reactjs.org) allows for better understanding of code and easier code development
 
-![demo](https://i.imgur.com/yUxIINE.gif)
+![demo](demo.gif)
 
-## 🛠 Built with
+## Built with
 
 - [globe.gl](https://github.com/vasturiano/globe.gl)
 - [d3.js](https://d3js.org/)
 - [reactjs](https://reactjs.org)
 
-## 📝 License
+## License
 
 Licensed under the [GNU General Public License](LICENSE.md).
 
-## 💕 Acknowledgments
+## Acknowledgments
 
 - Inspired by https://covidvisualizer.com
 - Inspired by https://covid3d.live
