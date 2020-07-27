@@ -1,122 +1,77 @@
 import * as React from "react";
-import ReactGlobe, { Marker } from "react-globe";
-
-import markers from "./markers";
-import markerRenderer from "./markerRenderer";
-import worldTexture from "./assets/world.jpg";
 import "./styles.css";
 import { useState, useEffect } from "react";
-import { Object3D } from "three";
+import { initGlobe } from "./Globe";
+import { GlobalCounts } from "./GlobalCounts";
+import { Counter } from "./Counter";
 import { Spinner } from "./Spinner";
-import globalData from "./assets/global.json";
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
 
 export default function App() {
-  const [details, setDetails] = useState<any>(null);
-  const [isLoaded, onTextureLoaded] = useState(false);
-  const [cameraOptions, setCameraOptions] = useState({
-    maxDistanceRadiusScale: 100,
-    autoRotateSpeed: 0.1,
-    distanceRadiusScale: 100,
-  });
+  const [totals, setTotals] = useState<number[]>([]);
 
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  function getTooltipContent(marker: Marker) {
-    return `Location: ${marker.Country} (Active Cases: ${marker.activeCases})`;
-  }
-
-  function onClickMarker(
-    marker: Marker,
-    markerObject?: Object3D,
-    event?: PointerEvent
-  ) {
-    zoomOut();
-    setDetails(getTooltipContent(marker));
-  }
-
-  function onDefocus(previousCoordinates: any, event?: PointerEvent) {
-    setDetails(null);
-  }
-
-  const zoomOut = () => {
+  useEffect(() => initGlobe(), []);
+  useEffect(() => {
     setTimeout(() => {
-      if (windowDimensions.width <= 500) {
-        setDetails(null);
-      }
+      let total: number[] = [];
+      total.push(GlobalCounts.totalConfirmed);
+      total.push(GlobalCounts.totalDeaths);
+      total.push(GlobalCounts.totalRecoveries);
+      total.push(GlobalCounts.totalActive);
+      setTotals(total);
     }, 3000);
-  };
-
+  }, [GlobalCounts.set]);
   return (
     <React.Fragment>
-      <Spinner loaded={isLoaded} />
-      <div className="header1">COVID19 Globe Tracker</div>
-      <div className="header2">Active Cases</div>
-      <div className="globe">
-        <ReactGlobe
-          markers={markers}
-          markerOptions={{ renderer: markerRenderer }}
-          onDefocus={onDefocus}
-          onClickMarker={onClickMarker}
-          onMouseOverMarker={onClickMarker}
-          onMouseOutMarker={() => setDetails(null)}
-          cameraOptions={{
-            maxDistanceRadiusScale: 100,
-            autoRotateSpeed: 1.0,
-            distanceRadiusScale: 100,
-          }}
-          focusOptions={{
-            distanceRadiusScale: 30,
-            enableDefocus: true,
-          }}
-          globeOptions={{
-            texture: worldTexture,
-            glowColor: "red",
-            enableClouds: false,
-          }}
-          onTextureLoaded={() => onTextureLoaded(true)}
-        />
-        {details && (
-          <div className="details">
-            <p> {details}</p>
-          </div>
-        )}
-      </div>
-      {isLoaded ? (
-        <div className="footer">
-          <Counter />
+      <div id="globeViz"></div>
+      <div className="top-info-container">
+        <div className="title">COVID-19</div>
+        <div className="title-desc">
+          Loading countries affected by the virus...
         </div>
-      ) : null}
+      </div>
+      <div className="bottom-info-container">
+        <Spinner loaded={GlobalCounts.set} />
+        {GlobalCounts.set ? (
+          <>
+            <div
+              style={{ fontSize: "14px", color: "#ccd6f6", marginTop: "35px" }}
+            >
+              Total Counts <span className="updated"></span>
+            </div>
+            <div style={{ color: "#e6f1ff", padding: "0 5px" }}>
+              <span id="infected">
+                INFECTED:
+                <Counter count={totals[0]} />
+              </span>
+              <span id="deaths">
+                {" "}
+                • DEATHS:
+                <Counter count={totals[1]} />
+              </span>
+              <span id="recovered">
+                {" "}
+                • RECOVERED:
+                <Counter count={totals[2]} />
+              </span>
+              <span id="active">
+                {" "}
+                • ACTIVE:
+                <Counter count={totals[3]} />
+              </span>
+            </div>
+          </>
+        ) : null}
+        <div style={{ marginTop: "5px" }}>
+          <a
+            href="https://github.com/tanmaylaud/covid19-globe-tracker"
+            rel="noopener noreferrer"
+            target="_BLANK"
+            style={{ color: "#ffffff", textDecoration: "none" }}
+          >
+            More Information
+          </a>
+        </div>
+      </div>
     </React.Fragment>
   );
-}
-
-function Counter() {
-  const [total, setTotal] = useState(globalData.totalCount);
-  const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    setTimeout(() => null, 5000);
-  }, []);
-  useEffect(() => {
-    if (counter != total) {
-      if (total - counter <= 1000) setCounter(counter + 1);
-      else if (counter < 10000) setCounter(counter + 1000);
-      else setCounter(counter + 500);
-    }
-  }, [counter]);
-
-  function numberWithCommas(x: number) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
-  return <p>{numberWithCommas(counter)}</p>;
 }
