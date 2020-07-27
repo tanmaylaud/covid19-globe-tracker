@@ -26,8 +26,8 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 750px) {
   .spinner {
-    left: 35%;
-    top: 50%;
+    left: 33%;
+    top: 45%;
     transform: translate(-50%, -50%);
   }
 }

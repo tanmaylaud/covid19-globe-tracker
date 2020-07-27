@@ -21,8 +21,10 @@ export default function App() {
       total.push(GlobalCounts.totalRecoveries);
       total.push(GlobalCounts.totalActive);
       setTotals(total);
+      if (!GlobalCounts.set) window.location.reload();
     }, 3000);
   }, [GlobalCounts.set]);
+
   return (
     <React.Fragment>
       <div id="globeViz"></div>
