@@ -6,7 +6,7 @@
 
 #### The globe model is not mine. It is heavily inspired by covid3d.live. I have simply done a complete re-write of the project using React and added my own styling.
 
-#### [React](https://reactjs.org) allows for better understanding of code and easier code development
+#### [React](https://reactjs.org) facilitates the overall process of writing components, ensures stable code, boosts productivity and leads to faster rendering
 
 ![demo](demo.gif)
 
