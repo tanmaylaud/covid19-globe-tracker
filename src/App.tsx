@@ -29,7 +29,7 @@ export default function App() {
       <div className="top-info-container">
         <div className="title">COVID-19 Globe Tracker</div>
         <div className="title-desc">
-          Hover on a country or territory to see cases, deaths, and recoveries.
+          Hover on a country or territory for details
         </div>
       </div>
       <div className="bottom-info-container">
