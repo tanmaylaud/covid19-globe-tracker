@@ -1,5 +1,5 @@
 import Globe, { GlobeInstance } from "globe.gl";
-import { request, getCoordinates, getPolygonLabel } from "./utils";
+import { request, getCoordinates } from "./utils";
 import {
   GLOBE_IMAGE_URL,
   BACKGROUND_IMAGE_URL,
@@ -9,6 +9,7 @@ import {
 import { interpolateReds, scaleSequential } from "d3";
 import { Countries, Country } from "./Country";
 import { GlobalCounts } from "./GlobalCounts";
+import { getPolygonLabel } from "./PolygonLabel";
 
 const getVal = (feat: any) => {
   return Math.pow(feat.covidData.active / feat.properties.POP_EST, 1 / 4);
@@ -38,8 +39,7 @@ export function initGlobe() {
     .polygonSideColor(() => "rgba(100, 100, 100, 0.05)")
     .polygonStrokeColor(() => "#ffff")
     .polygonLabel(({ properties: d, covidData: c }: any) => {
-      const flagName = d.ADMIN === "France" ? "fr" : d.ISO_A2.toLowerCase();
-
+      const flagName = getFlagName(d);
       return getPolygonLabel(flagName, d, c);
     })
     .onPolygonHover((hoverD: any) =>
@@ -56,6 +56,17 @@ export function initGlobe() {
     world.width(window.innerWidth);
     world.height(window.innerHeight);
   });
+
+  function getFlagName(d: any) {
+    switch (d.ADMIN) {
+      case "France":
+        return "fr";
+      case "Norway":
+        return "no";
+      default:
+        return d.ISO_A2.toLowerCase();
+    }
+  }
 }
 
 let dates: string[] = [];
@@ -66,7 +77,7 @@ async function getCases() {
   countries = await request(CASES_API);
   featureCollection = (await request(GEOJSON_URL)).features;
 
-  dates = Object.keys(countries.China);
+  dates = Object.keys(countries.India);
 
   updateCounters();
   updatePolygonsData();

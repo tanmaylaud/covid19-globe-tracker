@@ -1,6 +1,4 @@
 import dayjs from "dayjs";
-import { format } from "d3";
-import { FLAG_ENDPOINT } from "../Constants";
 
 export async function request(url: string) {
   try {
@@ -46,21 +44,3 @@ export const isMobile = (function (a) {
   );
   // @ts-ignore
 })(navigator.userAgent || navigator.vendor || window.opera);
-
-export function getPolygonLabel(flagName: any, d: any, c: any): string {
-  return `
-        <div class="card">
-          <img class="card-img" src="${FLAG_ENDPOINT}/${flagName}.png" alt="flag" />
-          <div class="container">
-             <span class="card-title"><b>${d.NAME}</b></span> <br />
-             <div class="card-spacer"></div>
-             <hr />
-             <div class="card-spacer"></div>
-             <span>Cases: ${numberWithCommas(c.confirmed)}</span>  <br />
-             <span>Deaths: ${numberWithCommas(c.deaths)}</span> <br />
-             <span>Recovered: ${numberWithCommas(c.recoveries)}</span> <br />
-             <span>Population: ${format(".3s")(d.POP_EST)}</span>
-          </div>
-        </div>
-      `;
-}
