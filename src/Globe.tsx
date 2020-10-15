@@ -79,10 +79,10 @@ async function getCases() {
 
   dates = Object.keys(countries.India);
 
-  updateCounters();
-  updatePolygonsData();
+  await updateCounters();
+  await updatePolygonsData();
 
-  updatePointOfView();
+  await updatePointOfView();
 }
 
 function updateCounters() {
